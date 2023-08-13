@@ -1,0 +1,17 @@
+{
+  "name": "cordcloud-action-js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "node test.js",
+    "main": "node main.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@actions/core": "^1.10.0",
+    "axios": "^1.4.0",
+    "speakeasy": "^2.0.0"
+  }
+}
