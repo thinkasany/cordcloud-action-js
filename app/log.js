@@ -4,7 +4,7 @@ const dayjs = require('dayjs')
 function now() {
   const tz = new Intl.DateTimeFormat().resolvedOptions().timeZone;
   const now = new Date().toLocaleString('en-US', { timeZone: tz });
-  return dayjs(now).format('YYYY-MM-DD HH:mm:ss');
+  return dayjs(now).add(8, 'hour').format('YYYY-MM-DD HH:mm:ss');
 }
 
 function info(s = '') {
