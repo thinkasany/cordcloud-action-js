@@ -22,5 +22,5 @@ outputs:
   result:
     description: "The result of api"
 runs:
-  using: "docker"
-  image: "Dockerfile"
+  using: node16
+  image: 'dist/index.js'
