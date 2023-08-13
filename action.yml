@@ -23,4 +23,4 @@ outputs:
     description: "The result of api"
 runs:
   using: node16
-  image: 'dist/index.js'
+  main: 'dist/index.js'
