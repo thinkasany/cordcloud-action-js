@@ -1,4 +1,5 @@
 const axios = require("axios");
+const log = require("./log");
 
 class Action {
   constructor(email, passwd, host = "cordcloud.us", code = "") {
@@ -65,15 +66,15 @@ class Action {
   async run() {
     // 登录
     const login = await this.login();
-    console.log(`尝试帐号登录，结果：${JSON.stringify(login)}`);
+    log.info(`尝试帐号登录，结果：${JSON.stringify(login)}`);
 
     // 签到
     const check = await this.checkIn();
-    console.log(`CordCloud 帐号续命失败，错误信息: ${JSON.stringify(check)}`);
+    log.info(`CordCloud 帐号续命失败，错误信息: ${JSON.stringify(check)}`);
 
     // 流量信息
     const info = await this.info();
-    console.log(`帐号流量使用情况：今日已用 ${info[0]}, 过去已用 ${info[1]}, 剩余流量 ${info[2]}`);
+    log.info(`帐号流量使用情况：今日已用 ${info[0]}, 过去已用 ${info[1]}, 剩余流量 ${info[2]}`);
   }
 }
 

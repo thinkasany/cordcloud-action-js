@@ -22,6 +22,13 @@ function setFailed(s = '') {
   core.setFailed(`[${now()}] ${s}`);
 }
 
+module.exports = {
+  info,
+  warning,
+  error,
+  setFailed
+}
+
 // // 使用示例
 // info('This is an info message.');
 // warning('This is a warning message.');
